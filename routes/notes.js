@@ -34,7 +34,7 @@ notes.post("/", (req, res) => {
 
 //DELETE route to delete note
 // notes.delete("/:id", (req, res) => {
-
+// readFromFile("./db/db.json").then(console.log("delete request received"));
 // });
 
 module.exports = notes;
