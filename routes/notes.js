@@ -1,6 +1,6 @@
 const notes = require("express").Router();
 const { readAndAppend, readFromFile } = require("../helpers/fsUtils");
-//Universally Unique Identifier to give each note a unique ID
+//Use the Universally Unique Identifier npm package to give each note a unique ID
 const { v4: uuidv4 } = require("uuid");
 
 //GET route for retrieving all notes
@@ -8,7 +8,7 @@ notes.get("/", (req, res) =>
   readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)))
 );
 
-//POST route for submitting a note
+//POST route for posting a note
 notes.post("/", (req, res) => {
   //Destructure req.body
   const { title, text } = req.body;
@@ -31,5 +31,10 @@ notes.post("/", (req, res) => {
     res.json("Error: could not post new note.");
   }
 });
+
+//DELETE route to delete note
+// notes.delete("/:id", (req, res) => {
+
+// });
 
 module.exports = notes;
