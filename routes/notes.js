@@ -16,7 +16,7 @@ notes.post("/", (req, res) => {
     const newNote = {
       title,
       text,
-      noteID: uuidv4(),
+      id: uuidv4(),
     };
 
     //The first argument is the content to append

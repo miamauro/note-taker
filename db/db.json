@@ -1,8 +1,7 @@
-//Array of notes
 [
   {
     "title": "Testing",
-    "text": "testing123",
-    "noteID": "27a9e4a2-06c8-4de9-873e-7c9a4599ef06"
+    "text": "this is a test.",
+    "id": "984ece18-522d-4546-bff9-14c234722199"
   }
 ]
